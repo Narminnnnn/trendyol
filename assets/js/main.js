@@ -1,3 +1,4 @@
+// add product
 function getData() {
     let container = document.querySelector(".cardCont")
     axios.get("https://fakestoreapi.com/products")
@@ -57,22 +58,50 @@ function getData() {
 getData()
 
 
+//  add header
 
-
-
-
-
-
-const search = document.getElementsByClassName("searchInput")
-search.addEventListener('input',((e)=>{
-e.preventDefault()
-let card = JSON.parse(localStorage.getItem("cardCont")) ||[]
-card.forEach((item)=>{
-   let data= item.toLowerCase.includes(e.target.value.toLowerCase())
-   if (data.len){
-
-   }
+window.addEventListener("scroll", () => {
+    let header = document.getElementById("scroll")
+    if (window.scrollY > 100) {
+        header.classList.add("headerAnime")
+    } else {
+        header.classList.remove("headerAnime")
+    }
 })
 
+// search
 
-}))
+// const search = document.getElementsByClassName("searchInput")
+// search.addEventListener('input',((e)=>{
+// e.preventDefault()
+// let card = JSON.parse(localStorage.getItem("cardCont")) ||[]
+// card.forEach((item)=>{
+//    let data= item.toLowerCase.includes(e.target.value.toLowerCase())
+//    if (data.len){
+
+//    }
+// })
+
+
+// }))
+
+
+//  sorting
+
+// const sortOptions = document.getElementById('sortOptions');
+// sortOptions.addEventListener('change', () => {
+//   const selectOption = sortOptions.value;
+// console.log("sortOptions");
+
+//   let sortProducts = [...allProducts]; 
+
+//   if (selectOption === 'priceCheap') {
+//     sortProducts.sort((a, b) => a.price - b.price);
+//   } else if (selectOption === 'priceExpensive') {
+//     sortProducts.sort((a, b) => b.price - a.price);
+//   } 
+
+//   displayProducts(sortProducts); 
+// });
+
+// getApi('https://fakestoreapi.com/products');

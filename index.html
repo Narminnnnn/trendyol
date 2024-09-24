@@ -17,60 +17,63 @@
     <header>
         <div class="headerUp">
             <ul>
-                <li>
+                <li class="nav-item">
                     <a href="">İndirim Kuponlarım</a>
                 </li>
-                <li>
+                <li class="nav-item">
                     <a href="">Trendyol'da Satış Yap</a>
                 </li>
-                <li>
+                <li class="nav-item">
                     <a href="">Hakkımızda</a>
                 </li>
-                <li>
+                <li class="nav-item">
                     <a href="">Yardım & Destek</a>
                 </li>
             </ul>
         </div>
-        <div class="headerSearch">
-            <div class="logo">
-                <img src="https://cdn.dsmcdn.com/web/logo/ty-web.svg" alt="">
-            </div>
-            <div class="search">
-                <input class="searchInput" placeholder="Aradığınız ürün, kategori veya markayı yazınız " type="text"
-                    style="height: 42px;width: 598px;">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <div class="accountNavigation">
-                <div class="signIN forum">
-                    <i class="fa-regular fa-user" style="font-size: 16px;"></i>
-                    <span>Giriş Yap</span>
+        <div id="scroll" class="headerTop">
+
+            <div class="headerSearch">
+                <div class="logo">
+                    <img src="https://cdn.dsmcdn.com/web/logo/ty-web.svg" alt="">
                 </div>
-                <div class="favorites forum" style="width: 86px;height: 40px;">
-                    <i class="fa-regular fa-heart" style="font-size: 16px;"></i>
-                    <span>Favorilerim</span>
+                <div class="search">
+                    <input class="searchInput" placeholder="Aradığınız ürün, kategori veya markayı yazınız " type="text"
+                        style="height: 42px;width: 598px;">
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-                <div class="basket forum">
-                    <i class="fa-solid fa-cart-shopping" style="font-size: 16px;"></i>
-                    <span>Sepetim</span>
+                <div class="accountNavigation">
+                    <div class="signIN forum">
+                        <i class="fa-regular fa-user" style="font-size: 16px;"></i>
+                        <span>Giriş Yap</span>
+                    </div>
+                    <div class="favorites forum" style="width: 86px;height: 40px;">
+                        <i class="fa-regular fa-heart" style="font-size: 16px;"></i>
+                        <span>Favorilerim</span>
+                    </div>
+                    <div class="basket forum">
+                        <i class="fa-solid fa-cart-shopping" style="font-size: 16px;"></i>
+                        <span>Sepetim</span>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="navigation">
             <nav>
                 <ul>
-                    <li><a href="">TÜM KATEGORİLER <span class="new">Yeni</span></a></li>
-                    <li><a href="">Azerbaycan</a></li>
-                    <li><a href="">Kadın</a></li>
-                    <li><a href="">Erkek</a></li>
-                    <li><a href="">Anne & Çocuk</a></li>
-                    <li><a href="">Ev & Yaşam</a></li>
-                    <li><a href="">Süpermarket</a></li>
-                    <li><a href="">Kozmetik</a></li>
-                    <li><a href="">Ayakkabı & Çanta</a></li>
-                    <li><a href="">Elektronik</a></li>
-                    <li><a href="">Spor&Outdoor</a></li>
-                    <li><a href="">Çok Satanlar <span class="new">Yeni</span></a></li>
-                    <li><a href="">Flaş Ürünler <span class="new">Yeni</span></a></li>
+                    <li class="nav-item"><a href="">TÜM KATEGORİLER <span class="new">Yeni</span></a></li>
+                    <li class="nav-item"><a href="">Azerbaycan</a></li>
+                    <li class="nav-item"><a href="">Kadın</a></li>
+                    <li class="nav-item"><a href="">Erkek</a></li>
+                    <li class="nav-item"><a href="">Anne & Çocuk</a></li>
+                    <li class="nav-item"><a href="">Ev & Yaşam</a></li>
+                    <li class="nav-item"><a href="">Süpermarket</a></li>
+                    <li class="nav-item"><a href="">Kozmetik</a></li>
+                    <li class="nav-item"><a href="">Ayakkabı & Çanta</a></li>
+                    <li class="nav-item"><a href="">Elektronik</a></li>
+                    <li class="nav-item"><a href="">Spor&Outdoor</a></li>
+                    <li class="nav-item"><a href="">Çok Satanlar <span class="new">Yeni</span></a></li>
+                    <li class="nav-item"><a href="">Flaş Ürünler <span class="new">Yeni</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -180,6 +183,14 @@
 
                 <div class="widgetHead">
                     <h2 class="famous">Popüler Ürünler</h2>
+                    <div class="sorting">
+                        <label class="famous sort"  for="sortOptions">Sırala:</label>
+                        <select id="sortOptions">
+                            <option value="default">Random</option>
+                            <option value="priceCheap">Ucuzdan Bahaya</option>
+                            <option value="priceExpensive">Bahadan Ucuza</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="cardCont">
                     <div class="widgetProductcards">
@@ -240,7 +251,128 @@
         </section>
 
     </main>
+    <footer>
+        <div class="foot">
+            <div class="container-foot">
+                <div class="firstcontFoot">
+                    <div class="listDiv">
+                        <h2 class="title">Trendyol</h2>
+                        <ul class="menu">
+                            <li class="nav-item"><a href="">Biz Kimiz</a></li>
+                            <li class="nav-item"><a href="">Kariyer</a></li>
+                            <li class="nav-item"><a href="">Sürdürülebilirlik</a></li>
+                            <li class="nav-item"><a href="">İletişim</a></li>
+                        </ul>
+                    </div>
+                    <div class="listDiv">
+                        <h2 class="title">Kampanyalar</h2>
+                        <ul class="menu">
+                            <li class="nav-item"><a href="">Kampanyalar</a></li>
+                            <li class="nav-item"><a href="">Alışveriş Kredisi</a></li>
+                            <li class="nav-item"><a href="">Elit Üyelik</a></li>
+                            <li class="nav-item"><a href="">Hediye Fikirleri</a></li>
+                            <li class="nav-item"><a href="">Trendyol Fırsatları</a></li>
+                        </ul>
+                    </div>
+                    <div class="listDiv">
+                        <h2 class="title">Satıcı</h2>
+                        <ul class="menu">
+                            <li class="nav-item"><a href="">Trendyol'da Satış Yap</a></li>
+                            <li class="nav-item"><a href="">Temel Kavramlar</a></li>
+                            <li class="nav-item"><a href="">Trendyol Akademi</a></li>
 
+                        </ul>
+                    </div>
+
+                    <div class="listDiv">
+
+                        <h2 class="title">Yardım</h2>
+                        <ul class="menu">
+                            <li class="nav-item"><a href="">Sıkça Sorulan Sorular</a></li>
+                            <li class="nav-item"><a href="">Canlı Yardım / Asistan</a></li>
+                            <li class="nav-item"><a href="">Nasıl İade Edebilirim</a></li>
+                            <li class="nav-item"><a href="">İşlem Rehberi</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="listDiv">
+
+                        <h2 class="title">Ülke Değiştir</h2>
+                        <button class="btn"> Ulke sec <i class="fa-solid fa-chevron-right"></i></button>
+                        <div class="social">
+                            <h2 class="title">Sosyal Medya</h2>
+                            <div class="sosialLink">
+
+                                <img src="https://cdn.dsmcdn.com/web/production/footer-facebook.png" alt="">
+                                <img src="https://cdn.dsmcdn.com/web/production/footer-instagram.png" alt="">
+                                <img src="https://cdn.dsmcdn.com/web/production/footer-youtube.png" alt="">
+                                <img src="https://cdn.dsmcdn.com/web/production/footer-x.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="secondcontFoot">
+                    <div class="listSecurity">
+                        <h2 class="tit">Güvenlik Sertifikası</h2>
+                        <div class="companyLink">
+                            <img src="https://cdn.dsmcdn.com/web/production/footer-etbis.png" alt="">
+                            <img src="https://cdn.dsmcdn.com/web/production/footer-trust-stamp.png" alt="">
+                            <img src="https://cdn.dsmcdn.com/web/production/footer-pci-dss.png" alt="">
+                            <img src="https://cdn.dsmcdn.com/web/production/footer-iso.png" alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="listSecurity">
+                        <h2 class="tit">Güvenli Alışveriş</h2>
+                        <div class="companyLink">
+                            <img src="https://cdn.dsmcdn.com/web/production/footer-troy.png" alt="">
+                            <img src="https://cdn.dsmcdn.com/web/production/footer-mastercard.png" alt="">
+                            <img src="https://cdn.dsmcdn.com/web/production/footer-visa.png" alt="">
+                            <img src="https://cdn.dsmcdn.com/web/production/footer-american-express.png" alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="listSecurity">
+
+                        <h2 class="tit">Mobil Uygulamalar</h2>
+                        <div class="companyLink">
+                            <img class="imgSize" src="https://cdn.dsmcdn.com/web/production/footer-app-store.png"
+                                alt="">
+                            <img class="imgSize" src="https://cdn.dsmcdn.com/web/production/footer-google-play.png"
+                                alt="">
+                            <img class="imgSize" src="https://cdn.dsmcdn.com/web/production/footer-app-gallery.png"
+                                alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-legal">
+            <div class="contfoot">
+                <div class="title">
+                    <p>©2024 DSM Grup Danışmanlık İletişim ve Satış Tic. A.Ş. Her Hakkı Saklıdır.</p>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li class="nav-item"><a href="">Çerez Tercihleri</a></li>
+                        <li class="nav-item"><a href="">KVKK ve Gizlilik Politikası</a></li>
+                        <li class="nav-item"><a href="">DSM Grup</a></li>
+                        <li class="nav-item"><a href="">Kullanım Koşulları</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="bot">
+            <button class="btnn"> <a href="#"><i class="fa-solid fa-arrow-up"></i> Yukari cik</a></button>
+        </div>
+    </footer>
 
 
 
